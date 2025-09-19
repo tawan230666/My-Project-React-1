@@ -1,0 +1,105 @@
+/* AddForm.jsx: <section> <form> ... */
+section {
+  display: grid;
+  place-items: center;
+}
+
+/* กล่องฟอร์ม */
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  width: min(800px, 100%);
+  padding: 14px;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* พื้นหลัง/เส้นขอบฟอร์มตามธีม */
+.light form {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.dark form {
+  background: rgba(17,24,39,0.6);
+  border: 1px solid #1f2937;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+/* label */
+form label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ช่องกรอก */
+form input,
+form select {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
+}
+
+/* input/select theme */
+.light form input,
+.light form select {
+  background: #f7f7f9;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+.dark form input,
+.dark form select {
+  background: #0e1527;
+  color: #e5e7eb;
+  border-color: #1f2937;
+}
+
+/* focus state */
+form input:focus,
+form select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.25);
+}
+
+/* ปุ่ม submit */
+.btnHeader {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, background-color .2s ease, box-shadow .2s ease;
+}
+
+.light .btnHeader { background: #16a34a; color: #fff; }       /* green-600 */
+.light .btnHeader:hover { background: #15803d; transform: translateY(-1px); }
+.dark  .btnHeader { background: #22c55e; color: #0b1220; }    /* green-500 */
+.dark  .btnHeader:hover { background: #86efac; transform: translateY(-1px); }
+
+/* disabled */
+.btnHeader:disabled {
+  background: gray !important;
+  color: #fff !important;
+  opacity: .8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* จัดฟอร์มให้วางเรียงเป็นแถวเมื่อหน้าจอกว้าง */
+@media (min-width: 720px) {
+  form {
+    grid-template-columns: auto 1fr 140px 140px auto;
+    align-items: center;
+  }
+  form label { grid-column: 1 / 2; margin: 0; }
+  form input[placeholder="Name"] { grid-column: 2 / 3; }
+  form input[placeholder="Age"]  { grid-column: 3 / 4; }
+  form select                    { grid-column: 4 / 5; }
+  form .btnHeader                { grid-column: 5 / 6; }
+}

@@ -1,0 +1,31 @@
+.User {
+  display: contents; /* ให้ li ใน PeronList คุม layout หลัก */
+}
+
+.User__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.User__avatar {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.User__del {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.light .User__del { background: #dc2626; color: #fff; }
+.light .User__del:hover { background: #b91c1c; }
+
+.dark .User__del { background: #f87171; color: #0b1220; }
+.dark .User__del:hover { background: #ef4444; }

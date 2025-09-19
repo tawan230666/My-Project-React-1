@@ -1,0 +1,30 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 10px;
+}
+
+.light .Header {
+  background: rgba(247,247,249,0.9);
+  border: 1px solid #e5e7eb;
+}
+
+.dark .Header {
+  background: rgba(17,24,39,0.6);
+  border: 1px solid #1f2937;
+}
+
+.Header h1 { margin: 0; font-size: 20px; }
+
+.Header span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}

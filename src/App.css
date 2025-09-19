@@ -1,0 +1,38 @@
+/* Reset ให้เต็มจอ */
+html, body { height: 100%; }
+body { margin: 0; }
+
+/* Theme */
+.light, .dark {
+  min-height: 100dvh;
+  transition: background-color .4s, color .4s;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: #0b1220;
+  color: white;
+}
+
+
+/* Container หลัก */
+.containerApp {
+  width: 100%;
+  min-height: 100%;
+  padding: 16px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 12px;
+}
+
+/* เส้นคั่นใต้ Header (ใช้ <hr /> ใน Header.jsx) */
+.light hr { border: none; border-top: 1px solid #e5e7eb; }
+.dark  hr { border: none; border-top: 1px solid #1f2937; }
+
+/* รีเซ็ตเล็กน้อย */
+* { box-sizing: border-box; }
+img, svg { display: block; max-width: 100%; }
