@@ -1,4 +1,4 @@
-import PeronList from "./components/PeronList";
+import PersonList from "./components/PersonList";
 import Header from "./components/Header";
 import AddForm from "./components/AddForm";
 import { useEffect, useState } from "react";
@@ -35,7 +35,7 @@ export default function App() {
       <div className="containerApp">
         <Header theme={theme} setTheme={setTheme} />
         <AddForm data={data} setData={setData} />
-        <PeronList data={data} deleteUser={deleteUser} />
+        <PersonList data={data} deleteUser={deleteUser} />
       </div>
     </div>
   );

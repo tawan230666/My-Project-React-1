@@ -1,11 +1,11 @@
 /* หัวข้อ + ปุ่ม toggle แสดง/ซ่อน */
-.PeronList__title {
+.PersonList__title {
   text-align: center;
   margin: 6px 0 12px;
   font-family: "Poppins", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 }
 
-.PeronList__toggle {
+.PersonList__toggle {
   display: block;
   margin: 0 auto 14px;
   padding: 8px 16px;
@@ -17,17 +17,17 @@
   transition: transform .12s ease, background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
-.light .PeronList__toggle {
+.light .PersonList__toggle {
   background: #2563eb; color: #fff;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
-.light .PeronList__toggle:hover { background: #1d4ed8; transform: translateY(-1px); }
+.light .PersonList__toggle:hover { background: #1d4ed8; transform: translateY(-1px); }
 
-.dark .PeronList__toggle {
+.dark .PersonList__toggle {
   background: #60a5fa; color: #0b1220;
   box-shadow: 0 8px 22px rgba(0,0,0,0.35);
 }
-.dark .PeronList__toggle:hover { background: #93c5fd; transform: translateY(-1px); }
+.dark .PersonList__toggle:hover { background: #93c5fd; transform: translateY(-1px); }
 
 /* รายการ */
 ul {

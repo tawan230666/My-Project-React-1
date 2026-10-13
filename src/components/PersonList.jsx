@@ -1,17 +1,17 @@
 import { useState } from "react";
 import User from "./User"
-import "./PeronList.css"
+import "./PersonList.css"
 import { ImEye } from "react-icons/im";
 import { ImEyeBlocked } from "react-icons/im";
 
-export default function PeronList({ data = [], deleteUser }) {
+export default function PersonList({ data = [], deleteUser }) {
 
     const [show, setShow] = useState(true);
 
     return (
         <>
-            <h1 className="PeronList__title">Employee : {data.length}</h1>
-            <button className="PeronList__toggle" onClick={() => setShow(!show)}>
+            <h1 className="PersonList__title">Employee : {data.length}</h1>
+            <button className="PersonList__toggle" onClick={() => setShow(!show)}>
                 {show ? <ImEye /> : <ImEyeBlocked />}
             </button>
             <ul>

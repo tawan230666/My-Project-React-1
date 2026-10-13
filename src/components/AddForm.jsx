@@ -19,7 +19,7 @@ export default function AddForm(props) {
         }
         setData([...data,user]);
         setName("");
-        setAge();
+        setAge("");
         setGender("ชาย");
     }
 

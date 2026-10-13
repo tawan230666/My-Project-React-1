@@ -1,5 +1,5 @@
 .User {
-  display: contents; /* ให้ li ใน PeronList คุม layout หลัก */
+  display: contents; /* ให้ li ใน PersonList คุม layout หลัก */
 }
 
 .User__row {
